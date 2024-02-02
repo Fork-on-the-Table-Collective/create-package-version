@@ -1,0 +1,12 @@
+name: 'Tag or Timestamp Action'
+description: 'Returns tag or timestamp with branch name'
+inputs:
+  github_ref:
+    description: 'Github ref'
+    required: true
+outputs:
+  packageName: # id of output
+    description: 'The name of the pacakge based on tag or timestamp with branch name'
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
