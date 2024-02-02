@@ -7,7 +7,7 @@ async function run() {
     let packageName;
 
     if (githubRef.startsWith('refs/tags/')) {
-        packageName = githubRef;
+        packageName = githubRef.replace('refs/tags/','');
     } else {
       const date = new Date();
       const timestamp = `${date.getFullYear()}_${date.getMonth()+1}_${date.getDate()}_${date.getHours()}_${date.getMinutes()}_${date.getSeconds()}`;
